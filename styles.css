@@ -1,0 +1,198 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #4a56e2;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #4a56e2;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #4a56e2;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a56e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #3949ab;
+    transform: translateY(-3px);
+}
+
+button i {
+    margin-right: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #4a56e2;
+    color: #fff;
+    font-weight: 600;
+}
+
+td {
+    background-color: #f8f8f8;
+    color: #555;
+}
+
+#resultado {
+    display: none;
+}
+
+/* Estilização de ícones */
+.form-group input {
+    padding-left: 40px;
+}
+
+.form-group i {
+    position: absolute;
+    left: 10px;
+    top: 70%;
+    transform: translateY(-60%);
+    font-size: 20px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.form-group input:focus ~ i {
+    color: #4a56e2;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Versão Responsiva */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    input[type="number"] {
+        font-size: 14px;
+    }
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-group label[for="caminhoDeVolta"] {
+    display: inline-block;
+    font-weight: 400;
+    color: #555;
+}

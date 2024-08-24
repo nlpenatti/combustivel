@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo de Combustível</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Consumo de Combustível</h1>
+        
+        <div class="form-group">
+            <label for="distancia">Distância percorrida (ida) em km:</label>
+            <i class="fas fa-road"></i>
+            <input type="number" id="distancia" placeholder="Ex: 20">
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="caminhoDeVolta" checked>
+            <label for="caminhoDeVolta">Adicionar o caminho da volta</label>
+        </div>
+
+        <div class="form-group">
+            <label for="consumo">Consumo médio do veículo em km/l:</label>
+            <i class="fas fa-gas-pump"></i>
+            <input type="number" id="consumo" placeholder="Ex: 9">
+        </div>
+
+        <div class="form-group">
+            <label for="preco">Preço do combustível por litro:</label>
+            <i class="fas fa-dollar-sign"></i>
+            <input type="number" id="preco" placeholder="Ex: 5.94">
+        </div>
+
+        <button onclick="calcular()">
+            <i class="fas fa-calculator"></i>
+            Calcular
+        </button>
+
+        <h2 id="resultado-titulo" style="display: none;">Resultado</h2>
+
+        <table id="resultado">
+            <thead>
+                <tr>
+                    <th>Kilômetros</th>
+                    <th>Consumo (litros)</th>
+                    <th>Preço (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="km"></td>
+                    <td id="litros"></td>
+                    <td id="precoFinal"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
