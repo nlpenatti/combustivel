@@ -5,6 +5,11 @@ function calcular() {
     const preco = parseFloat(document.getElementById('preco').value);
     const caminhoDeVolta = document.getElementById('caminhoDeVolta').checked;
 
+    if (distancia === "" || consumo === "" || preco === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
     const distanciaTotal = caminhoDeVolta ? distancia * 2 : distancia;
 
     const litrosConsumidos = distanciaTotal / consumo;
