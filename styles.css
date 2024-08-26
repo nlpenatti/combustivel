@@ -56,7 +56,7 @@ label {
     color: #555;
 }
 
-input[type="number"] {
+input[type="number"], input[type="text"] {
     width: 100%;
     padding: 12px;
     padding-left: 40px;
@@ -68,7 +68,7 @@ input[type="number"] {
     transition: border-color 0.3s;
 }
 
-input[type="number"]:focus {
+input[type="number"]:focus, input[type="text"]:focus {
     border-color: #e74c3c; /* Vermelho */
 }
 
@@ -131,7 +131,7 @@ td {
     display: none;
 }
 
-/* Estilização de ícones */
+/* Estilização de ícones nos inputs */
 .form-group input {
     padding-left: 40px;
 }
@@ -139,8 +139,8 @@ td {
 .form-group i {
     position: absolute;
     left: 10px;
-    top: 70%;
-    transform: translateY(-60%);
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 20px;
     color: #aaa;
     transition: color 0.3s;
@@ -148,6 +148,21 @@ td {
 
 .form-group input:focus ~ i {
     color: #e74c3c; /* Vermelho */
+}
+
+/* Estilo para checkboxes */
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    transform: translateY(3px);
+}
+
+.form-group label[for="caminhoDeVolta"] {
+    display: inline-block;
+    font-weight: 400;
+    color: #555;
 }
 
 @keyframes fadeIn {
@@ -178,18 +193,7 @@ td {
         padding: 10px;
     }
 
-    input[type="number"] {
+    input[type="number"], input[type="text"] {
         font-size: 14px;
     }
-}
-
-.form-group input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
-}
-
-.form-group label[for="caminhoDeVolta"] {
-    display: inline-block;
-    font-weight: 400;
-    color: #555;
 }
