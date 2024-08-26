@@ -16,7 +16,7 @@
         <div class="form-group">
             <label for="distancia">Distância percorrida (ida) em km:</label>
             <i class="fas fa-road"></i>
-            <input type="number" pattern="[0-9]*" title="Apenas números são permitidos" id="distancia" placeholder="Ex: 20">
+            <input type="text" id="distancia" placeholder="Ex: 20" oninput="validarNumeros(this)">
         </div>
 
         <div class="form-group">
@@ -27,13 +27,13 @@
         <div class="form-group">
             <label for="consumo">Consumo médio do veículo em km/l:</label>
             <i class="fas fa-gas-pump"></i>
-            <input type="number" pattern="[0-9]*" title="Apenas números são permitidos" id="consumo" placeholder="Ex: 9">
+            <input type="text" id="consumo" placeholder="Ex: 9" oninput="validarNumeros(this)">
         </div>
 
         <div class="form-group">
             <label for="preco">Preço do combustível por litro:</label>
             <i class="fas fa-dollar-sign"></i>
-            <input type="number" pattern="[0-9]*" title="Apenas números são permitidos" id="preco" placeholder="Ex: 5.94">
+            <input type="text" id="preco" placeholder="Ex: 5.94" oninput="validarNumeros(this)">
         </div>
 
         <button onclick="calcular()">
@@ -60,6 +60,6 @@
             </tbody>
         </table>
     </div>
-    <script src="script.js"></script>
+    <script src='script.js'></script>
 </body>
 </html>
