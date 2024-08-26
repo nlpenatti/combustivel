@@ -178,7 +178,7 @@ td {
 @media (max-width: 600px) {
     .container {
         padding: 15px;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     h1 {
