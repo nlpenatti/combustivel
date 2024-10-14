@@ -5,12 +5,13 @@ body {
 .navbar {
     background-color: #1a237e;
 }
-.main-container {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+.sidebar {
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    height: 100vh;
+}
+.content {
     padding: 30px;
-    margin-top: 30px;
 }
 .form-control, .btn {
     border-radius: 10px;
