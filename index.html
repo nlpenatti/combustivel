@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="bomba-de-combustivel.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body class="bg-dark text-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -35,54 +36,55 @@
         </div>
     </nav>
 
-    <div class="container mt-5 pt-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card bg-secondary text-light mb-4">
+            <div class="col-lg-3 sidebar">
+                <div class="card bg-secondary text-light animate__animated animate__fadeIn">
                     <div class="card-body">
-                        <h2 class="card-title mb-4">Informe os detalhes da viagem e veículo</h2>
+                        <h2 class="card-title animate__animated animate__bounceIn">Detalhes da Viagem</h2>
                         <form id="calculadoraForm">
-                            <div class="mb-3">
+                            <div class="mb-3 animate__animated animate__fadeInUp">
                                 <label for="distancia" class="form-label">
-                                    <i class="fas fa-road me-2"></i>Distância de ida (km):
+                                    <i class="fas fa-road"></i>Distância de ida (km)
                                 </label>
-                                <input type="number" class="form-control" id="distancia" required step="0.01">
+                                <input type="number" class="form-control" id="distancia" required step="0.01" placeholder="Ex: 100 para 100km">
                             </div>
 
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="caminhoDeVolta" checked>
                                 <label class="form-check-label" for="caminhoDeVolta">
-                                    Deseja calcular o caminho de volta? <i class="fas fa-exchange-alt me-2"></i>
+                                    <i class="fas fa-exchange-alt"></i>Incluir volta?
                                 </label>
                             </div>
 
                             <div class="mb-3">
                                 <label for="consumo" class="form-label">
-                                    <i class="fas fa-tachometer-alt me-2"></i>Consumo médio (km/l):
+                                    <i class="fas fa-tachometer-alt"></i>Consumo médio (km/l)
                                 </label>
-                                <input type="number" class="form-control" id="consumo" required step="0.1">
+                                <input type="number" class="form-control" id="consumo" required step="0.1" placeholder="Ex: 10 para 10km/l">
                             </div>
 
                             <div class="mb-3">
                                 <label for="preco" class="form-label">
                                     <i class="fas fa-dollar-sign me-2"></i>Preço do combustível (R$/l):
                                 </label>
-                                <input type="number" class="form-control" id="preco" required step="0.01">
+                                <input type="number" class="form-control" id="preco" required step="0.01" placeholder="Ex: 5.50 para R$5,50/l">
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-calculator me-2"></i> Calcular
+                            <button type="submit" class="btn btn-primary w-100 animate__animated animate__pulse animate__infinite">
+                                <i class="fas fa-calculator"></i>
+                                <span>Calcular</span>
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-lg-9 content">
                 <div id="resultado" style="display: none;">
                     <h2 class="mb-4">Resumo da Viagem</h2>
                     <div class="row">
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
                             <div class="card bg-secondary text-light">
                                 <div class="card-body">
                                     <h5><i class="fas fa-route text-primary me-2"></i>Distância Total</h5>
@@ -91,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
                             <div class="card bg-secondary text-light">
                                 <div class="card-body">
                                     <h5><i class="fas fa-gas-pump text-success me-2"></i>Combustível</h5>
@@ -100,7 +102,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
                             <div class="card bg-secondary text-light">
                                 <div class="card-body">
                                     <h5><i class="fas fa-money-bill-wave text-danger me-2"></i>Custo Total</h5>
@@ -112,7 +114,7 @@
                     </div>
 
                     <div class="row mt-4">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 col-sm-12 mb-3">
                             <div class="card bg-secondary text-light">
                                 <div class="card-body">
                                     <h5><i class="fas fa-chart-line text-info me-2"></i>Custo por Km</h5>
@@ -120,7 +122,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 col-sm-12 mb-3">
                             <div class="card bg-secondary text-light">
                                 <div class="card-body">
                                     <h5><i class="fas fa-piggy-bank text-warning me-2"></i>Economia Potencial</h5>
@@ -131,14 +133,14 @@
                     </div>
 
                     <div class="row mt-4">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-12">
                             <h4>Distribuição de Custos</h4>
                             <div class="chart-container">
                                 <canvas id="graficoDistribuicao"></canvas>
                             </div>
                             <p id="mensagemGraficoDistribuicao" class="small"></p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-12">
                             <h4>Comparativo de Eficiência</h4>
                             <div class="chart-container">
                                 <canvas id="graficoEficiencia"></canvas>
@@ -175,6 +177,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow.js/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
