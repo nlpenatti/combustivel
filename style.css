@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+}
+.navbar {
+    background-color: #1a237e;
+}
+.main-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 30px;
+}
+.form-control, .btn {
+    border-radius: 10px;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(26,35,126,0.25);
+}
+.btn-primary {
+    background-color: #1a237e;
+    border-color: #1a237e;
+}
+.btn-primary:hover {
+    background-color: #0e1442;
+    border-color: #0e1442;
+}
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.result-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.efficiency-meter {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.efficiency-fill {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
